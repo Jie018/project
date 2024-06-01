@@ -160,7 +160,7 @@ fun Greeting5(name: String, modifier: Modifier = Modifier) {
                     }
 
             }) {
-                Text("新增/修改資料")
+                Text("新增資料")
             }
         }
     }
