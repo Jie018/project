@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "706969116489",
+    "project_id": "app-farmer",
+    "storage_bucket": "app-farmer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706969116489:android:728e57cdcb6c5eeda4c498",
+        "android_client_info": {
+          "package_name": "pu.edu.tw.yu.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoMAImvpn4ROy5KPjVI-pUYHkm07MUwGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
