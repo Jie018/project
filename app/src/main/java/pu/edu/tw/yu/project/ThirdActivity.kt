@@ -42,7 +42,7 @@ class ThirdActivity : ComponentActivity() {
             ProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting3(
-                        name = "想知道更多植物!",
+                        name = "想知道更多植物",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
