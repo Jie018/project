@@ -40,7 +40,7 @@ class Forth0Activity : ComponentActivity() {
             ProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting40(
-                        name = "動手試試看",
+                        name = "動手試試看吧",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
