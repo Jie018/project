@@ -77,6 +77,7 @@ fun Greeting5(name: String, modifier: Modifier = Modifier) {
     var userDate by remember { mutableStateOf(" ")}
     var userWeather by remember { mutableStateOf(" ")}
     var userWord by remember { mutableStateOf(" ")}
+    var msg by remember { mutableStateOf("訊息")}
     val db = Firebase.firestore
 
 
@@ -153,14 +154,13 @@ fun Greeting5(name: String, modifier: Modifier = Modifier) {
                     .document(userName)
                     .set(user)
                     .addOnSuccessListener { documentReference ->
-                        var msg = "新增/異動資料成功"
+                        msg = "新增/異動資料成功"
                     }
                     .addOnFailureListener { e ->
-                        var msg = "新增/異動資料失敗：" + e.toString()
+                        msg = "新增/異動資料失敗：" + e.toString()
                     }
-
             }) {
-                Text("新增資料")
+                Text("新增/修改資料")
             }
         }
     }

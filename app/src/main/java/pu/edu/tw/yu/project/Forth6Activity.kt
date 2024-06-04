@@ -82,21 +82,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             .background(ColorTulip),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally){
-            Column {
-                Button(
-                    onClick = { appear = !appear },
-                    colors = ButtonDefaults.buttonColors(Color.LightGray),
-                    border = BorderStroke(1.dp, Color.Black)
-                    //modifier = Modifier.rotate(buttonAngle)
-                ) {
-                    if (appear) Text(text = "花盆消失",
-                        fontSize = 20.sp,
-                        color = Color.Black)
-                    else Text(text = "花盆出現",
-                        fontSize = 20.sp,
-                        color = Color.Black)
-                }
-            }
+
             AnimatedVisibility(
                 visible = appear,
                 enter = fadeIn(
@@ -125,6 +111,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ){
+                    Row {
+                        Button(
+                            onClick = { appear = !appear },
+                            colors = ButtonDefaults.buttonColors(Color.LightGray),
+                            border = BorderStroke(1.dp, Color.Black)
+                            //modifier = Modifier.rotate(buttonAngle)
+                        ) {
+                            Text(text = "長大了!",
+                                fontSize = 20.sp,
+                                color = Color.Black)
+                        }
+                    }
 
                     Image(
                         painter = painterResource(id = R.drawable.fin),
@@ -141,6 +139,19 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 
 
+
+            }
+            Button(
+                onClick = { appear = !appear
+                    var it = Intent(context, Forth6Activity::class.java)
+                    context.startActivity(it)},
+                colors = ButtonDefaults.buttonColors(Color.LightGray),
+                border = BorderStroke(1.dp, Color.Black)
+                //modifier = Modifier.rotate(buttonAngle)
+            ) {
+                Text(text = "讓我再看看它小時候的樣子",
+                    fontSize = 20.sp,
+                    color = Color.Black)
             }
             Button(onClick = {appear = !appear
                 var it = Intent(context, SecondActivity::class.java)
